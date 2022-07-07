@@ -38,6 +38,9 @@ section{
     font-weight: 700;
     color: #795a62;
 }
+.title-span{
+    text-align: center;
+}
 .welcome a{
     margin-top: 3rem;
     border-radius: 8px;

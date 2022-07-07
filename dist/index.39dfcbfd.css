@@ -45,6 +45,10 @@ section {
   font-weight: 700;
 }
 
+.title-span {
+  text-align: center;
+}
+
 .welcome a {
   width: 10rem;
   color: #c48200;
