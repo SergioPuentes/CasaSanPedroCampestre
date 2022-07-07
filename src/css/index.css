@@ -125,6 +125,7 @@ section{
     display: grid;
     place-content: center;
     font-family: 'Satisfy', cursive;
+    color: black;
 }
 .item a:hover{
     color: black;
