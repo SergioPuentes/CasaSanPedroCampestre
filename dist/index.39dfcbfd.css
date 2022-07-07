@@ -163,7 +163,7 @@ section {
   font-size: 4rem;
 }
 
-#menu-selected {
+.menu-selected {
   width: 90%;
   max-width: 90rem;
   background-image: linear-gradient(100deg, #ffc451 0%, #42272e 100%);
@@ -174,7 +174,7 @@ section {
   display: flex;
 }
 
-#menu-selected div {
+.menu-selected div {
   width: 100%;
   text-align: center;
   flex-direction: column;
@@ -183,6 +183,7 @@ section {
 
 .item a {
   color: #000;
+  text-align: center;
   font-weight: 700;
   text-decoration: none;
 }
@@ -220,6 +221,12 @@ section {
   gap: 3rem;
   margin-bottom: 7rem;
   display: flex;
+}
+
+button {
+  background-color: #0000;
+  border: none;
+  font-weight: 700;
 }
 
 :root {

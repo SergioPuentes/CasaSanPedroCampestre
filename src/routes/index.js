@@ -7,13 +7,12 @@ const routes = {
     '/:id': menu
 };
 const router = async () => {
-    const content = null ||document.getElementById('menu-selected');
-  
+    const content = document.getElementById("menu-selected")
     let hash = getHash();
     let route = await resolveRoutes(hash);
     let render = routes[route] ? routes[route] : nada;
-    content.innerHTML= await render();
-    
-};
-
+    content.parentNode 
+    content.removeChild(content.firstChild || null)
+    content.innerHTML = await render()
+}
 export default router;

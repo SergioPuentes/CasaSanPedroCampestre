@@ -1,5 +1,5 @@
 const resolveRoutes = (route) => {
-    if (route.length <= 10) {
+    if (route.length <= 25) {
       let validRoute = route === '#specialty' ? route : '/:id';
       return validRoute;
     }

@@ -541,7 +541,80 @@ var _scrollRevealDefault = parcelHelpers.interopDefault(_scrollReveal);
 var _tiltAnimation = require("../src/css/animation/scripts/tiltAnimation");
 var _tiltAnimationDefault = parcelHelpers.interopDefault(_tiltAnimation);
 window.addEventListener("load", (0, _indexDefault.default));
-window.addEventListener("hashchange", (0, _indexDefault.default));
+let button1 = document.getElementById("bmenu-selected1");
+button1.addEventListener("click", async ()=>{
+    await elegir("1");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button2 = document.getElementById("bmenu-selected2");
+button2.addEventListener("click", async ()=>{
+    await elegir("2");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button3 = document.getElementById("bmenu-selected3");
+button3.addEventListener("click", async ()=>{
+    await elegir("3");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button4 = document.getElementById("bmenu-selected4");
+button4.addEventListener("click", async ()=>{
+    await elegir("4");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button5 = document.getElementById("bmenu-selected5");
+button5.addEventListener("click", async ()=>{
+    await elegir("5");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button6 = document.getElementById("bmenu-selected6");
+button6.addEventListener("click", async ()=>{
+    await elegir("6");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button7 = document.getElementById("bmenu-selected7");
+button7.addEventListener("click", async ()=>{
+    await elegir("7");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button8 = document.getElementById("bmenu-selected8");
+button8.addEventListener("click", async ()=>{
+    await elegir("8");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button9 = document.getElementById("bmenu-selected9");
+button9.addEventListener("click", async ()=>{
+    await elegir("9");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+let button10 = document.getElementById("bmenu-selected10");
+button10.addEventListener("click", async ()=>{
+    await elegir("10");
+    await (0, _indexDefault.default)();
+    await scroll();
+});
+function elegir(a) {
+    let targetURL = "#menu-selected" + a;
+    let newURL = document.createElement("a");
+    newURL.href = targetURL;
+    document.body.appendChild(newURL);
+    newURL.click();
+}
+function scroll() {
+    let targetURL = "#menu-selected";
+    let newURL = document.createElement("a");
+    newURL.href = targetURL;
+    document.body.appendChild(newURL);
+    newURL.click();
+}
 (0, _scrollRevealDefault.default)((0, _animations.targetElements), (0, _animations.defaultProps));
 (0, _tiltAnimationDefault.default)();
 
@@ -565,6 +638,8 @@ const router = async ()=>{
     let hash = (0, _getHashDefault.default)();
     let route = await (0, _resolveRoutesDefault.default)(hash);
     let render = routes[route] ? routes[route] : (0, _nadaDefault.default);
+    content.parentNode;
+    content.removeChild(content.firstChild || null);
     content.innerHTML = await render();
 };
 exports.default = router;
@@ -572,7 +647,7 @@ exports.default = router;
 },{"../utils/getHash":"cBXxo","../utils/resolveRoutes":"45qF6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../utils/getProduct":"leJS3","../components/nada":"5Pv0i"}],"cBXxo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const getHash = ()=>location.hash.slice(1).toLocaleLowerCase().split("/")[1] || "/";
+const getHash = ()=>location.hash.slice(1).toLocaleLowerCase().split("*")[0] || "/";
 exports.default = getHash;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -609,7 +684,7 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const resolveRoutes = (route)=>{
-    if (route.length <= 10) {
+    if (route.length <= 25) {
         let validRoute = route === "#specialty" ? route : "/:id";
         return validRoute;
     }
@@ -649,52 +724,51 @@ var _nadaDefault = parcelHelpers.interopDefault(_nada);
 let title = "";
 const data = ()=>{
     let hash = (0, _getHashDefault.default)();
-    if (hash == 1) {
+    if (hash == "menu-selected1") {
         title = "Entradas";
         return 0, _entradasDefault.default;
-    } else if (hash == 2) {
+    } else if (hash == "menu-selected2") {
         title = "Ensaladas";
         return 0, _ensaladasDefault.default;
-    } else if (hash == 3) {
+    } else if (hash == "menu-selected3") {
         title = "Carnes, Pescados y Picadas";
         return 0, _carnesPescadosYPicadasDefault.default;
-    } else if (hash == 4) {
+    } else if (hash == "menu-selected4") {
         title = "Platos Tipicos (Fines de semana)";
         return 0, _platosTipicosDefault.default;
-    } else if (hash == 5) {
+    } else if (hash == "menu-selected5") {
         title = "Pastas y Raviolis";
         return 0, _pastasYRaviolisDefault.default;
-    } else if (hash == 6) {
+    } else if (hash == "menu-selected6") {
         title = "Pizzas y Hamburguesas";
         return 0, _pizzasYHamburguesasDefault.default;
-    } else if (hash == 7) {
+    } else if (hash == "menu-selected7") {
         title = "Men\xfa Infantil";
         return 0, _menuInfantilDefault.default;
-    } else if (hash == 8) {
+    } else if (hash == "menu-selected8") {
         title = "Postres";
         return 0, _postresDefault.default;
-    } else if (hash == 9) {
+    } else if (hash == "menu-selected9") {
         title = "Bebidas";
         return 0, _bebidasDefault.default;
-    } else if (hash == 10) {
+    } else if (hash == "menu-selected10") {
         title = "Bebidas Calientes";
         return 0, _bebidasCalientesDefault.default;
     }
 };
 const menu = async ()=>{
-    if (await location.hash == "#specialty") return (0, _nadaDefault.default)();
-    else {
-        const info = await data();
-        return `<div class="item-container" id="/${location.hash}">
-        <div class="close-icon"><a href="/#specialty"><img rel="icon" src="https://icon-library.com/images/svg-close-icon/svg-close-icon-4.jpg" width="20px"></a></div>
+    const info = await data();
+    return `<div class="menu-selected" id="${(0, _getHashDefault.default)() + "*"}"> 
+                <div class="item-container">
+                <div class="close-icon"><a href="/#specialty"><img rel="icon" src="https://icon-library.com/images/svg-close-icon/svg-close-icon-4.jpg" width="20px"></a></div>
         <div>
         <h2>${title}</h2>
         <div>
         ${info.map((item)=>(0, _itemDefault.default)(item))}
         </div>
         </div>
+        </div>
         </div>`;
-    }
 };
 exports.default = menu;
 

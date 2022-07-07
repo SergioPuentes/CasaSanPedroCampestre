@@ -143,7 +143,7 @@ section{
     font-size: 4rem;
     margin-bottom: 5rem;
 }
-#menu-selected{
+.menu-selected{
     margin-top: 3rem;
     margin-bottom: 5rem;
     width: 90%;
@@ -157,7 +157,7 @@ section{
     );
     border-radius: 32px;
 }
-#menu-selected div{
+.menu-selected div{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -167,6 +167,7 @@ section{
     text-decoration: none;
     color: black;
     font-weight: 700;
+    text-align: center; 
 }
 .item a span{
     font-size:1.8rem ;
@@ -200,4 +201,9 @@ section{
     justify-content: center;
     gap: 3rem;
     margin-bottom: 7rem;
+}
+button{
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
 }
