@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 }
 
 html {
@@ -132,7 +132,8 @@ section {
   width: 10rem;
   height: 10rem;
   place-content: center;
-  font-size: 2rem;
+  font-family: Satisfy, cursive;
+  font-size: 2.2rem;
   display: grid;
 }
 
@@ -226,6 +227,7 @@ section {
 button {
   background-color: #0000;
   border: none;
+  font-family: Roboto Condensed, sans-serif;
   font-weight: 700;
 }
 

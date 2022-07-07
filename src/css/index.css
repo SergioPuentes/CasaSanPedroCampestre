@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
 }
 html{
     font-size: 62.5%;
@@ -118,9 +118,10 @@ section{
 .item{
     width: 10rem;
     height: 10rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
     display: grid;
     place-content: center;
+    font-family: 'Satisfy', cursive;
 }
 .item a:hover{
     color: black;
@@ -206,4 +207,5 @@ button{
     background-color: transparent;
     border: none;
     font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
 }
