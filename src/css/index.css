@@ -43,6 +43,7 @@ section{
 }
 .welcome a{
     margin-top: 3rem;
+    margin-bottom: 2rem;
     border-radius: 8px;
     width: 10rem;
     padding:0.7rem;
